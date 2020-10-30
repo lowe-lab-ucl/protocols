@@ -27,7 +27,7 @@ The microscope is located inside a standard cell culture incubator, with an adde
 
 ## Microscope Infrastructure
 
-The C0<sub>2</sub> cylinder requires replacing approximately every 1.5-2 months. This replacement is done by SMB orders. 
+The CO<sub>2</sub> cylinder requires replacing approximately every 1.5-2 months. This replacement is done by BOC (contact SMB orders). 
 **_Insert contact details here_** 
 
 Once the water pump tank has less than 10cm depth of water it will require refilling with approximately 800mL-1L of distilled water (available from the LCN).
@@ -91,4 +91,3 @@ The stage should be left at the -8000μm Z position when finished.
 #### Error messages
 
 The Thorlabs precision stage controller is sometimes problematic: an error will arise that states `Java.sc unresponsive`. To circumvent this error shutdown micromanager, reboot the Thorlabs controller and restart micromanager. 
-
