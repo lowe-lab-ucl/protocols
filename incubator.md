@@ -73,7 +73,7 @@ Once the water pump tank has less than 10cm depth of water it will require refil
     
 6. Stopping the acquistition 
 
-    - **CAUTION** Wait until acqusition loop is finished before closing the terminal to end acquisition. **_is terminal the correct word?_** 
+    - **CAUTION** Wait until acqusition loop is finished before closing the terminal to end acquisition. 
     
 
 ## Notes
