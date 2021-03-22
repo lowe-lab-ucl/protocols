@@ -15,7 +15,7 @@ Contents:
 
 ## Microscope Layout
 
-The microscope is located inside a standard cell culture incubator, with an added water pump to maintain humidity. The incubator microscope is located to the right of the desktop computer used to control it, in front of the incubator CO<sub>2</sub> supply cylinder. 
+The microscope is located inside a standard cell culture incubator, with an added water pump to maintain humidity. The incubator microscope is located to the right of the desktop computer used to control it, in front of the incubator CO<sub>2</sub> supply cylinder. On/off switch located just above the front left foot of the incubator.
 
 "Control 2" - stage controller. On/off switch located at the back of the box. Top left button for the Z position. 
 
