@@ -23,7 +23,8 @@ The microscope is located inside a standard cell culture incubator, with an adde
 
 "Thorlabs" - precision stage control. On/off switch at the back left side. 
 
-**_Insert labelled picture of microscope here_** 
+![Kraken_labelled](https://user-images.githubusercontent.com/16838461/111985628-be135480-8b04-11eb-8765-0c87603f3bde.png)
+
 
 ## Microscope Infrastructure
 
