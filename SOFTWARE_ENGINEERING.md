@@ -1,4 +1,4 @@
-# Contributing
+# Guide to software engineering in the Lowe lab
 
 :construction: Work in Progress :construction:
 
