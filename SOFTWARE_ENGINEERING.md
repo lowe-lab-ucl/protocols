@@ -2,18 +2,29 @@
 
 :construction: Work in Progress :construction:
 
-
----
 Sections
-* Python style
-* Documentation
-* Tests
+* [Python](#python)
+* [Documentation](#documentation)
+* [Tests](#tests)
 * [Using github](#using-github)
 
+---
+
+# Python
+
+---
+
+# Documentation
+
+---
+
+# Tests
+
+---
 
 # Using github
 
-## Setting up your fork
+## Setting up your fork of an existing project
 
 First fork the repo on github.  When you have created your fork, clone it so that you have a local copy:
 
