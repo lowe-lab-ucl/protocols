@@ -3,6 +3,13 @@
 :construction: Work in Progress :construction:
 ## Setting up your fork
 
+---
+Sections
+* Python
+* Documentation
+* Tests
+* Using github
+
 First fork the repo on github.  When you have created your fork, clone it so that you have a local copy:
 
 ```sh
