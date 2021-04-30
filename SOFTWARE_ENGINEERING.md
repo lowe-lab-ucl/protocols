@@ -8,6 +8,10 @@ Sections
 * [Tests](#tests)
 * [Using github](#using-github)
 
+
+"The Turing Way" is an amazing open-source guide to software development and data science. I recommend that you take a look:
+https://the-turing-way.netlify.app/welcome
+
 ---
 
 # Python
