@@ -16,6 +16,9 @@ Sections
 
 # Documentation
 
+We are following the `numpy` style guidelines:  
+https://numpydoc.readthedocs.io/en/latest/format.html#overview
+
 ---
 
 # Tests
