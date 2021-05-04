@@ -42,7 +42,7 @@ cd <repo name>
 
 Next, you need to link it to the main repo:
 ```sh
-git remote add upstream https://github.com/quantumjot/<repo name>.git
+git remote add upstream https://github.com/lowe-lab-ucl/<repo name>.git
 ```
 **This is important**, because it enables you to keep your fork up-to-date with everyone's changes.
 
