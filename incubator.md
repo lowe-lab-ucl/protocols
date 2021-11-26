@@ -1,4 +1,4 @@
-# Incubator Microscope "KRAKEN" Protocol - work in progress!
+# Incubator Microscope "KRAKEN" Protocol 
 
 Author: Nathan J. Day
 
@@ -34,58 +34,60 @@ Once the water pump tank has less than 10cm depth of water it will require refil
 
 ## Step-by-step usage instructions
 
-1. Turn the system on 
+1. Turn the system on: 
 
     - Follow the microscope layout section above and turn on all the necessary components. 
+        - Be sure to check the CO<sub>2</sub> cylinder to ensure that there's enough for your experiment.  
 
-2. Start Micromanager Gamma
+2. Start Micromanager Gamma:
 
-    - Preexisting configurations should suffice
-    - 2x2 binning needs to be set, as default is "OFF"
-    - Exposure option here is for live feed of microscope field of view, the exposure set later in `Params.json` will overide this during the time-lapse acquisition
+    - Preexisting configurations should suffice.
+    - 2x2 binning needs to be set, as default is "OFF".
+    - Exposure option here is for live feed of microscope field of view, the exposure set later in `Params.json` will overide this during the time-lapse acquisition.
     - Select channel for live-view browsing (sometimes need to toggle filter wheel option from 0 to 1).
     
-3. Store image positions for future time-lapse acquisition
+3. Store image positions for future time-lapse acquisition:
 
-    - `Stage` button opens the position list
-    - `LIVE image acquisition` button to show current field of view 
-    - Mark positions of interest using `MARK` button
+    - `Stage` button opens the position list.
+    - If the haptic stage controller is not functional then click on the 4 arrow icon to use the on screen xyz control. 
+    - `LIVE image acquisition` button to show current field of view. 
+    - Pan and zoom to find positions of interest and then save those positions using the `MARK` icon on the position list panel.
         - When focusing the Z position, it is advisable to use similar power and exposure settings to what you will later define for the time lapse exposure, in the parameters "Params.json" file. It is also advisable to view the live image with contrast limits that are as wide as possible to gauge a better view of how in focus the whole image pixel range is. Narrowing the contrast limits may cause one to focus on the wrong features, for example a irrelevant bright spot of fluorescence
-    - Save positions of interest using `Save As...`, path must match the new experiment directory path specified later in the `Params.json` file
+    - Once you have found and marked all of your positions of interest, save them using `Save As...`. The path to this position `.pos` file must match the new experiment directory path specified later in the `Params.json` file (i.e. save the position file in a new experiment folder).
         - When selecting the number of positions, bear in mind the number of image acquisitions for each channel that will need to be completed within the defined frame rate. For example, the microscope will struggle to complete more than 12, 4-colour positions within a 4 minute time period. It is advised that at least 30 seconds is left for the microscope to return to the origin position between frame acquisitions.
-    - Leave cell sample for >2 hours to allow for it to equilibrate with incubator environment
-        - Do not open the incubator in this time period. Try not to disturb the incubator at all after the initial positions are set
-    - Update the focus on all positions and resave position list
+    - Leave cell sample for >2 hours to allow for it to equilibrate with incubator environment.
+        - Do not open the incubator in this time period. Try not to disturb the incubator at all after the initial positions are set.
+    - After waiting for >2 hours, update the focus on all positions and re-save position list. 
 
-4. Set parameters
+4. Set parameters:
 
     - In order to start imaging, the acquisition parameters must be set in the following file:
         `C:\User\Microscope\Docs\Octopus_lite_v2\Params.json`
         or 
         `C:\User\Microscope\Docs\Octopus_lite_v2\Params_[username].json`
-    - You can find an example of this file in this repository, it is advised to not change any parameters you are uncertain of. 
-    - In this file you can specify the acquisition channels as `BF, GFP, RFP, iRFP`
+        - You can find an example of this file in this repository, it is advised to not change any parameters you are uncertain of. 
+    - In this file you can specify the acquisition channels by setting the dictionary key entry of `"use"` in each channel to either `True` or `False`. You can also change the exposure or power settings for each channel, the number of images, the delay (in seconds) between each frame and the experiment directory. 
         - If using the iRFP channel, a Z-position offset needs to be defined. It is advised that this is manually calculated for your sample by viewing the focal depth difference in the live view. A previous value that has been used for 24-well plates is -3.4μm. 
     - Before setting the number of channels and the `num_images`, try to ensure that there is enough hard drive space to finish the entire acquisition. A 4-channel, 24 position, 1200 frame acquisition can be up to appoximately 350GB.
-    - The most important aspect of the parameters file is to define the path to the previously saved position list (`stage_positions`) and the path to the output data folder, where the images will be saved
-    - Once the relevant paramters have been defined, be sure to save the `Params_[username].json` file in the `User\Microscope\Documents\Octopus_lite_v2` directory, with your username added to the filename if you have changed any of the parameters
+    - An important aspect of the parameters file is to define the path to the previously saved position list (`stage_positions`) and the path to the output data folder, where the images will be saved.
+    - Once the relevant paramters have been defined, be sure to save the `Params_[username].json` file in the `User\Microscope\Documents\Octopus_lite_v2` directory, with your username added to the filename if you have changed any of the parameters.
     
-5. Start acquisition
+5. Start acquisition:
 
-    - Close Micromanager
-    - Click the ACQUIRE shortcut on the desktop
+    - Close Micromanager.
+    - Click the ACQUIRE shortcut on the desktop.
         - If this does not work then open Anaconda Prompt from the start menu, navigate to Octopus_lite_v2 directory using bash commands (`cd User\Microscope\Documents\Octopus_lite_v2` and enter the command `python run.py`
-    - Select the params file you just saved out using the numbered index shown in the Anaconda Prompt terminal
-    - The acquisition should then begin to run, printing out the progress in the terminal window
+    - Select the params file you just saved out using the numbered index shown in the Anaconda Prompt terminal.
+    - The acquisition should then begin to run, printing out the progress in the terminal window.
     
-6. Checking the acqusition 
+6. Checking the acqusition: 
 
-    - Open ImageJ
-    - Navigate to ouput path and open as virtual stack
+    - Open ImageJ.
+    - Navigate to ouput path and open as virtual stack.
     
-7. Stopping the acquistition 
+7. Stopping the acquistition: 
 
-    - **CAUTION** Wait until acqusition loop is finished before closing the terminal to end acquisition. 
+    - **CAUTION** Wait until acqusition loop is finished (i.e. no images are being taken at that time point, the scope is waiting until the next frame time period) before closing the terminal to end acquisition. Ending the acqusition mid-capture will cause the acquisition program to have difficulties resuming or starting a new acquisition.
     
 
 ## Notes
