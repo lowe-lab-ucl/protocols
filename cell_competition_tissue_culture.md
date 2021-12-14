@@ -46,7 +46,8 @@ In order to maintain a healthy population of MDCK epithelial cells, they need to
 ## Preparing a competition experiment for imaging
 
     1. Repeat passaging steps as above, ensuring that you keep the previous passage's cells in the old T-25 flasks. 
-        1a. If you are planning on imaging induced Scr<sup>KD</sup> cells then you need to add doxycycline at 1/2500 concentration (2μL per T-25 flask) 2 days before splitting for an experiment.
+        1a. If you are planning on imaging induced Scr<sup>KD</sup> cells then you need to add doxycycline at 1/2500 concentration (2μL per 5ml DMEM in T-25 flask) 2 days before splitting for an experiment.
+        1b. If you are planning on imaging induced Ras<sup>V12</sup> cells then you need to add doxycycline at 1/2500 concentration (2μL per 5ml DMEM) in the imaging dish.
     2. Take 10μL of cell/DMEM solution and add to cell counter to determine the concentration of cells.
         2a. It is good practice to the four furthest corner squares of the cell counter to gauge an accurate representation of cell solution density. 
     3. Calculate the number of cells you need to make up 1x10<sup>5</sup>cells/mL seeding density for imaging.
