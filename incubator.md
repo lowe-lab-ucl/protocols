@@ -111,3 +111,5 @@ The stage should be left at the -8000μm Z position when finished.
 The Thorlabs precision stage controller is sometimes problematic: an error will arise that states `Java.sc unresponsive`. To circumvent this error shutdown micromanager, reboot the Thorlabs controller and restart micromanager.
 
 **_Are you having a live-view problem?_** The filter wheel doesn't always go back to the correct starting position after using the iRFP channel. If this is the case then toggle the filter wheel option from 0 to 1
+
+**_Focus issue?_** The filter wheel not returning to the correct position can result in a dim, out of focus signal appearing. Try resetting the filter wheel option from 0 to 1. 
